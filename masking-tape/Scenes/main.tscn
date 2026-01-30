@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bcomoyu7gm5ut"]
+
+[ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="1_jjgbg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bo1nx"]
+
+[node name="Main" type="Node" unique_id=1818422626]
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=413852509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=293495534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+shape = SubResource("BoxShape3D_7u77a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1523660637]
+mesh = SubResource("BoxMesh_jjgbg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439878071]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9.767035, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=1061115857 instance=ExtResource("1_jjgbg")]
+
+[node name="Block" type="RigidBody3D" parent="." unique_id=1804170934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 9.967567)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block" unique_id=364429125]
+shape = SubResource("BoxShape3D_jjgbg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block" unique_id=183947217]
+mesh = SubResource("BoxMesh_bo1nx")
+
+[node name="Block2" type="RigidBody3D" parent="." unique_id=1897705912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -11.642687)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block2" unique_id=857291105]
+shape = SubResource("BoxShape3D_jjgbg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block2" unique_id=1484523590]
+mesh = SubResource("BoxMesh_bo1nx")
