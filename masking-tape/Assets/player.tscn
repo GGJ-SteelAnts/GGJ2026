@@ -2,16 +2,22 @@
 
 [ext_resource type="Script" uid="uid://bfvq264rut6xy" path="res://Assets/player.gd" id="1_tpd1a"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vc4ur"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tpd1a"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1061115857]
 script = ExtResource("1_tpd1a")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=284011216]
 
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1667616666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=910582280]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=892107893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_vc4ur")
+shape = SubResource("CapsuleShape3D_tpd1a")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=910582280]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+[node name="GrabRay" type="RayCast3D" parent="." unique_id=2096948930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40728617, 0)
+target_position = Vector3(0, 0, -1.1)

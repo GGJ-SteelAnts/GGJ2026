@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bcomoyu7gm5ut"]
 
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://car23dc87dell" path="res://Assets/block.tscn" id="2_8gbba"]
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="2_bo1nx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
@@ -8,10 +9,6 @@ size = Vector3(60, 2, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
 size = Vector3(60, 2, 60)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_bo1nx"]
 
 [node name="Main" type="Node" unique_id=1818422626]
 
@@ -31,23 +28,11 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1061115857 instance=ExtResource("1_jjgbg")]
 
-[node name="Block" type="RigidBody3D" parent="." unique_id=1804170934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 9.967567)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Block" unique_id=364429125]
-shape = SubResource("BoxShape3D_jjgbg")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Block" unique_id=183947217]
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="Block2" type="RigidBody3D" parent="." unique_id=1897705912]
+[node name="Block" parent="." unique_id=302519340 instance=ExtResource("2_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -11.642687)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Block2" unique_id=857291105]
-shape = SubResource("BoxShape3D_jjgbg")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Block2" unique_id=1484523590]
-mesh = SubResource("BoxMesh_bo1nx")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1421778780]
 mesh_library = ExtResource("2_bo1nx")
+
+[node name="Block2" parent="." unique_id=1403485775 instance=ExtResource("2_8gbba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 11.643)
