@@ -97,6 +97,9 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = target_velocity
 	move_and_slide()
+	
+	if grabbed_box == null:
+		_try_push_only(direction)
 
 func _try_grab() -> void:
 	if grabbed_box != null:
@@ -108,8 +111,36 @@ func _try_grab() -> void:
 
 	var c := grab_ray.get_collider()
 	if c is PushBox:
-		grabbed_box = c as PushBox
+		var box := c as PushBox
+		if box.mode != PushBox.Mode.GRABBABLE:
+			return
+		grabbed_box = box
 		grabbed_box.grabbed = true
+
+func _try_push_only(move_dir: Vector3) -> void:
+	if move_dir.length() < 0.1:
+		return
+
+	for i in range(get_slide_collision_count()):
+		var col := get_slide_collision(i)
+		var c := col.get_collider()
+		if c is PushBox:
+			var box := c as PushBox
+			if box.mode != PushBox.Mode.PUSH_ONLY:
+				continue
+
+			var into_box: Vector3 = -col.get_normal()
+			into_box.y = 0.0
+			if into_box.length() < 0.001:
+				continue
+			into_box = into_box.normalized()
+
+			var md := move_dir.normalized()
+			if md.dot(into_box) < 0.6:
+				continue
+
+			box.try_push(into_box)
+			break
 
 func _release_grab() -> void:
 	if grabbed_box == null:
