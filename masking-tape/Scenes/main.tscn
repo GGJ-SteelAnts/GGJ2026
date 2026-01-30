@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://car23dc87dell" path="res://Assets/block.tscn" id="2_8gbba"]
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dmedbnul01wtl" path="res://Assets/bolder.tscn" id="4_jjvhh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(60, 2, 60)
@@ -36,3 +37,6 @@ mesh_library = ExtResource("2_bo1nx")
 
 [node name="Block2" parent="." unique_id=1403485775 instance=ExtResource("2_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 11.643)
+
+[node name="Bolder" parent="." unique_id=93088795 instance=ExtResource("4_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6025124, 0.50000095, -0.26894665)
