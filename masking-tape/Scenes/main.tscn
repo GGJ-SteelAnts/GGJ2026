@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bcomoyu7gm5ut"]
 
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="1_jjgbg"]
+[ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="2_bo1nx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(60, 2, 60)
@@ -47,3 +48,6 @@ shape = SubResource("BoxShape3D_jjgbg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Block2" unique_id=1484523590]
 mesh = SubResource("BoxMesh_bo1nx")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1421778780]
+mesh_library = ExtResource("2_bo1nx")
