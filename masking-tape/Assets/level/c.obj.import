@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c8no52m05qqgf"
-path="res://.godot/imported/c.obj-f9de3d5a24bf91d12bad2659cf14285c.mesh"
+path="res://.godot/imported/c.obj-075d19466b89ae6951d079e33029854f.mesh"
 
 [deps]
 
-files=["res://.godot/imported/c.obj-f9de3d5a24bf91d12bad2659cf14285c.mesh"]
+files=["res://.godot/imported/c.obj-075d19466b89ae6951d079e33029854f.mesh"]
 
-source_file="res://assets/c.obj"
-dest_files=["res://.godot/imported/c.obj-f9de3d5a24bf91d12bad2659cf14285c.mesh", "res://.godot/imported/c.obj-f9de3d5a24bf91d12bad2659cf14285c.mesh"]
+source_file="res://Assets/level/c.obj"
+dest_files=["res://.godot/imported/c.obj-075d19466b89ae6951d079e33029854f.mesh", "res://.godot/imported/c.obj-075d19466b89ae6951d079e33029854f.mesh"]
 
 [params]
 

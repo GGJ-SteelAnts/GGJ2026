@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dhvj2caht06tv"]
+
+[ext_resource type="ArrayMesh" uid="uid://c8no52m05qqgf" path="res://Assets/level/c.obj" id="1_3efjx"]
+[ext_resource type="ArrayMesh" uid="uid://c6qq413x1sf2u" path="res://Assets/level/o.obj" id="2_5qip5"]
+[ext_resource type="ArrayMesh" uid="uid://bp6mxcpf2tlj5" path="res://Assets/level/o_1.obj" id="3_d5kjf"]
+[ext_resource type="ArrayMesh" uid="uid://w7rpu4v6pn6f" path="res://Assets/level/s.obj" id="4_gbsrp"]
+[ext_resource type="ArrayMesh" uid="uid://bw7cus3f4hqui" path="res://Assets/level/t.obj" id="5_tuotw"]
+[ext_resource type="ArrayMesh" uid="uid://dxgb24obgxc7d" path="res://Assets/level/u.obj" id="6_dxq17"]
+
+[node name="Tiles" type="Node3D" unique_id=2027929530]
+
+[node name="C" type="MeshInstance3D" parent="." unique_id=555868310]
+mesh = ExtResource("1_3efjx")
+
+[node name="O" type="MeshInstance3D" parent="." unique_id=1268103771]
+mesh = ExtResource("2_5qip5")
+
+[node name="O1" type="MeshInstance3D" parent="." unique_id=258402619]
+mesh = ExtResource("3_d5kjf")
+
+[node name="S" type="MeshInstance3D" parent="." unique_id=560601902]
+mesh = ExtResource("4_gbsrp")
+
+[node name="T" type="MeshInstance3D" parent="." unique_id=2096892525]
+mesh = ExtResource("5_tuotw")
+
+[node name="U" type="MeshInstance3D" parent="." unique_id=1447960128]
+mesh = ExtResource("6_dxq17")
