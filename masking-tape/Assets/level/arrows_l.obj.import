@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtsb06fqnylrk"
+path="res://.godot/imported/arrows_l.obj-0b0247bf1eca352b32e984cbd4e60bfe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arrows_l.obj-0b0247bf1eca352b32e984cbd4e60bfe.mesh"]
+
+source_file="res://Assets/level/arrows_l.obj"
+dest_files=["res://.godot/imported/arrows_l.obj-0b0247bf1eca352b32e984cbd4e60bfe.mesh", "res://.godot/imported/arrows_l.obj-0b0247bf1eca352b32e984cbd4e60bfe.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

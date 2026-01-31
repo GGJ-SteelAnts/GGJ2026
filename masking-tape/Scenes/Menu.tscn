@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://cc2ne6swxqqbi"]
 
+[ext_resource type="Script" uid="uid://15lprj33qlc6" path="res://Scenes/menu.gd" id="1_ma218"]
 [ext_resource type="Texture2D" uid="uid://d3f63vttcd2b1" path="res://Sprites/bg_3.png" id="1_nklf4"]
 [ext_resource type="Texture2D" uid="uid://cxu4q1g4krbvy" path="res://Sprites/bg_addon_2.png" id="2_nklf4"]
 [ext_resource type="Theme" uid="uid://ci3suq164ss8y" path="res://new_theme.tres" id="3_a7hwb"]
+[ext_resource type="AudioStream" uid="uid://dkx530brosxs8" path="res://Audio/Ambience N flute.mp3" id="4_s2c3o"]
 
-[node name="Container" type="Control" unique_id=499872521]
+[node name="Menu" type="Control" unique_id=499872521]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ma218")
 
 [node name="bg" type="TextureRect" parent="." unique_id=395673767]
 layout_mode = 1
@@ -69,3 +72,12 @@ text = "Credits"
 [node name="quit" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=805646378]
 layout_mode = 2
 text = "Quit"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=2004611939]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=609039855]
+stream = ExtResource("4_s2c3o")
+autoplay = true
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/nev_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

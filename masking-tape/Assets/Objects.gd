@@ -4,10 +4,12 @@ class_name PushBox
 enum Mode { GRABBABLE, PUSH_ONLY }
 @export var mode: Mode = Mode.GRABBABLE
 
+@export var fall_acceleration := 75.0
 @export var push_step: float = 1.0 
 @export var push_time: float = 0.50
 @export var push_cooldown: float = 0.15
 
+var _entered: bool = false
 var _tween: Tween = null
 var _moving: bool = false
 
@@ -18,7 +20,12 @@ func action(push_dir: Vector3) -> void:
 		Mode.PUSH_ONLY:
 			if _moving:
 				return
-			var target : Vector3 = global_position - (push_dir * push_step)
+			var motion := -push_dir.normalized() * push_step
+
+			if test_move(global_transform, motion) and _entered:
+				return
+				
+			var target : Vector3 = global_position + motion
 
 			_moving = true
 			_tween = create_tween()
@@ -32,13 +39,15 @@ func action(push_dir: Vector3) -> void:
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 
-	for i in range(get_slide_collision_count()):
-		var col := get_slide_collision(i)
-		var other := col.get_collider()
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body is not Player and body != self:
+		_entered = true
+		if _tween:
+			_tween.kill()
+			_tween = null
+		_moving = false
 
-		if other is PushBox:
-			if _tween:
-				_tween.kill()
-				_tween = null
-			_moving = false
-			
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	if body is not Player and body != self:
+		_entered = false

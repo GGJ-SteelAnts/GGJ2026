@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crbbsg2wif7r4"]
 
 [ext_resource type="Script" uid="uid://bfvq264rut6xy" path="res://Assets/player.gd" id="1_tpd1a"]
+[ext_resource type="AudioStream" uid="uid://c8dwp8m5f2rde" path="res://Audio/Maya Fluting.mp3" id="2_chitn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tpd1a"]
 
@@ -41,10 +42,21 @@ grow_vertical = 2
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 40.0
+offset_top = -1.0
+offset_right = 1.0
 grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1730411934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 light_color = Color(1, 0.7137255, 0.39607844, 1)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=1336990860]
+
+[node name="AudioStreamMainMusic" type="AudioStreamPlayer3D" parent="." unique_id=1867881595]
+stream = ExtResource("2_chitn")
+volume_db = -1.0
+autoplay = true
+
+[node name="AudioStreamSounds" type="AudioStreamPlayer3D" parent="." unique_id=110090866]

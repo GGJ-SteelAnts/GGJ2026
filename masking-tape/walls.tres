@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b6sawgo4wp51s"]
 
-[ext_resource type="Texture2D" uid="uid://3b86wk0ob3m5" path="res://ss_tiles_BaseColor.png" id="1_o8xs5"]
-[ext_resource type="Texture2D" uid="uid://bshkph6lqbiah" path="res://ss_tiles_OcclusionRoughnessMetallic.png" id="2_m67i8"]
-[ext_resource type="Texture2D" uid="uid://vyo6yw5ks1gc" path="res://ss_tiles_Normal.png" id="4_l6wwy"]
+[ext_resource type="Texture2D" uid="uid://3b86wk0ob3m5" path="res://Sprites/corridor_base/ss_tiles_BaseColor.png" id="1_o8xs5"]
+[ext_resource type="Texture2D" uid="uid://bshkph6lqbiah" path="res://Sprites/corridor_base/ss_tiles_OcclusionRoughnessMetallic.png" id="2_m67i8"]
+[ext_resource type="Texture2D" uid="uid://vyo6yw5ks1gc" path="res://Sprites/corridor_base/ss_tiles_Normal.png" id="4_l6wwy"]
 
 [resource]
 albedo_texture = ExtResource("1_o8xs5")

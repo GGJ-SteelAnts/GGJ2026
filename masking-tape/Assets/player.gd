@@ -9,35 +9,15 @@ class_name Player
 @export var max_look_up := deg_to_rad(80.0)
 @export var max_look_down := deg_to_rad(-80.0)
 
-var grid_index: int = 0
-@export var grids: Array[Node]
-
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var interact_label: Label = $UI/Label
+@onready var grid_switch: GridSwitch = get_tree().root.get_child(1)
 
 var activeMask: Mask.Type = Mask.Type.NONE
 
 var interactTarget = null
 
 var pitch := 0.0
-
-func set_grid_enabled(grid_name: String, enabled: bool) -> void:
-	for grid in grids:
-		if grid.name == grid_name:
-			grid.show()
-			grid.set_collision_layer(1)
-			grid.set_collision_mask(1)
-
-func set_grid_enabled_only(grid_name: String) -> void:
-	for grid in grids:
-		if grid.name == grid_name:
-			grid.show()	
-			grid.set_collision_layer(1)
-			grid.set_collision_mask(1)	
-		else:
-			grid.hide()
-			grid.set_collision_layer(0)
-			grid.set_collision_mask(0)
 
 func _ready() -> void:
 	interact_label.text = ""
@@ -58,10 +38,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("switch_grid"):
-		grid_index = grid_index + 1
-		if grid_index > (grids.size() -1):
-			grid_index = 0
-		set_grid_enabled_only(grids[grid_index].name)
+		grid_switch.grid_index = grid_switch.grid_index + 1
+		if grid_switch.grid_index > (grid_switch.grids.size() -1):
+			grid_switch.grid_index = 0
+			grid_switch.set
+		grid_switch.set_grid_enabled_only(grid_switch.grids[grid_switch.grid_index].name)
 	
 	if interactTarget != null:
 		interact_label.text = "Press E to interact"
@@ -91,4 +72,5 @@ func _physics_process(delta: float) -> void:
 			other.action(col.get_normal())
 
 func attacked() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
 	pass

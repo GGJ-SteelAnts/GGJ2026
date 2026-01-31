@@ -1,19 +1,35 @@
 [gd_scene format=3 uid="uid://dmedbnul01wtl"]
 
 [ext_resource type="Script" uid="uid://dia7rkvnb5yay" path="res://Assets/Objects.gd" id="1_jb30m"]
-[ext_resource type="Material" uid="uid://bdoo3vefs7ewl" path="res://Materials/green.tres" id="2_m88gg"]
+[ext_resource type="Material" uid="uid://d15kvy10h6o5q" path="res://Materials/stone.material" id="2_afu4m"]
+[ext_resource type="ArrayMesh" uid="uid://bdbp7qtp5drn2" path="res://Assets/level/stone_wall.obj" id="3_6sk7q"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jb30m"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_afu4m"]
+size = Vector3(1.69076, 2.42451, 1.69029)
 
-[sub_resource type="SphereMesh" id="SphereMesh_jb30m"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_6sk7q"]
+size = Vector3(1.75, 2, 1.75)
 
 [node name="Bolder" type="CharacterBody3D" unique_id=1309546037]
 script = ExtResource("1_jb30m")
 mode = 1
+push_step = 0.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2085129586]
-shape = SubResource("BoxShape3D_jb30m")
+[node name="StoneWall" type="MeshInstance3D" parent="." unique_id=303806641]
+material_override = ExtResource("2_afu4m")
+mesh = ExtResource("3_6sk7q")
+surface_material_override/0 = ExtResource("2_afu4m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=773473624]
-material_override = ExtResource("2_m88gg")
-mesh = SubResource("SphereMesh_jb30m")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2060302556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00020301342, 1.212255, 0)
+shape = SubResource("BoxShape3D_afu4m")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=988963613]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=856137854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_6sk7q")
+
+[connection signal="area_shape_entered" from="Area3D" to="." method="_on_area_3d_area_shape_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
