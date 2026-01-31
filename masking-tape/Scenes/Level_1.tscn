@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="2_i63mn"]
 [ext_resource type="PackedScene" uid="uid://bqpx0eojc18bl" path="res://Assets/Pillar.tscn" id="3_j0k67"]
 [ext_resource type="PackedScene" uid="uid://dmedbnul01wtl" path="res://Assets/bolder.tscn" id="3_nh7xm"]
+[ext_resource type="PackedScene" uid="uid://c2x7c7vkj0tg6" path="res://Assets/pit_spikes.tscn" id="4_5r5j8"]
 [ext_resource type="PackedScene" uid="uid://bq2cuqspxo1d1" path="res://Assets/mask.tscn" id="4_nw7js"]
 
 [node name="Level1" type="Node" unique_id=814323965 node_paths=PackedStringArray("grids")]
@@ -14,28 +15,35 @@ grids = [NodePath("GridMap_a"), NodePath("GridMap_b"), NodePath("GridMap_c")]
 [node name="GridMap_a" type="GridMap" parent="." unique_id=187625679]
 mesh_library = ExtResource("1_oiua3")
 data = {
-"cells": PackedInt32Array(19, 65535, 1441799, 19, 1, 7, 20, 65535, 1441798, 20, 1, 1048582, 21, 1, 1048583, 21, 65535, 655367, 19, 0, 1048585, 20, 0, 1048585, 21, 0, 655366, 18, 0, 655360, 16, 0, 0, 15, 0, 655360, 13, 0, 655360, 12, 0, 655360, 11, 0, 655360, 10, 0, 655360, 9, 0, 655360, 8, 65535, 655367, 8, 1, 1048583, 6, 1, 7, 6, 65535, 1441799, 6, 0, 6, 7, 1, 1048582, 7, 65535, 1441798, 8, 0, 4, 7, 0, 4, 17, 0, 0, 14, 0, 10)
+"cells": PackedInt32Array(19, 65535, 1441799, 19, 1, 7, 20, 65535, 1441798, 20, 1, 1048582, 21, 1, 1048583, 21, 65535, 655367, 19, 0, 1048585, 20, 0, 1048585, 21, 0, 655366, 18, 0, 655360, 16, 0, 0, 15, 0, 655360, 13, 0, 655360, 12, 0, 655360, 11, 0, 655360, 10, 0, 655360, 9, 0, 655360, 8, 65535, 655367, 8, 1, 1048583, 6, 1, 7, 6, 65535, 1441799, 6, 0, 6, 7, 1, 1048582, 7, 65535, 1441798, 8, 0, 4, 7, 0, 4, 17, 0, 0, 14, 0, 655374)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Pillar3" parent="GridMap_a" unique_id=981871675 instance=ExtResource("3_j0k67")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.935, 1, -0.15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.170696, 1, -0.15)
 
 [node name="Pillar4" parent="GridMap_a" unique_id=986113583 instance=ExtResource("3_j0k67")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.935, 1, 2.15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.170696, 1, 2.15)
+
+[node name="Pillar5" parent="GridMap_a" unique_id=1352920067 instance=ExtResource("3_j0k67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.80452, 1, -0.15)
+
+[node name="Pillar6" parent="GridMap_a" unique_id=660695759 instance=ExtResource("3_j0k67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.80452, 1, 2.15)
 
 [node name="GridMap_b" type="GridMap" parent="." unique_id=1645351086]
 visible = false
 mesh_library = ExtResource("1_oiua3")
 data = {
-"cells": PackedInt32Array(12, 0, 1, 16, 0, 8, 16, 65535, 1441792, 16, 65534, 655361, 15, 65534, 655360, 14, 65534, 655360, 12, 65534, 1441793, 13, 65534, 0, 12, 65535, 1441792, 13, 0, 655360, 14, 0, 655360)
+"cells": PackedInt32Array(12, 0, 1, 16, 0, 1048581, 16, 65535, 1441792, 16, 65534, 655361, 15, 65534, 655360, 14, 65534, 655360, 12, 65534, 1441793, 13, 65534, 0, 12, 65535, 1441792, 13, 0, 655360, 14, 0, 655360, 15, 0, 655365)
 }
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="GridMap_c" type="GridMap" parent="." unique_id=1494428778]
 visible = false
 mesh_library = ExtResource("1_oiua3")
 data = {
-"cells": PackedInt32Array(15, 0, 1441793, 15, 1, 1441792, 14, 2, 655360, 13, 2, 655360, 12, 1, 1048576, 15, 2, 1048577, 12, 2, 1, 12, 0, 1441793, 13, 0, 655360)
+"cells": PackedInt32Array(15, 0, 655361, 15, 1, 1441792, 14, 2, 655360, 13, 2, 655360, 12, 1, 1048576, 15, 2, 1048577, 12, 2, 1, 12, 0, 1441793, 13, 0, 655360, 14, 0, 655374)
 }
 
 [node name="Player" parent="." unique_id=1061115857 instance=ExtResource("2_i63mn")]
@@ -48,3 +56,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.850919, 1.000001, 1.155077
 
 [node name="Bolder" parent="." unique_id=1309546037 instance=ExtResource("3_nh7xm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.781527, 1.0076199, 0.9954512)
+
+[node name="Pit_Spikes" parent="." unique_id=1186053055 instance=ExtResource("4_5r5j8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.029366, 0.9343811, 0.9670973)

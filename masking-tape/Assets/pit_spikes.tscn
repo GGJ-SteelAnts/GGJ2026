@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c2x7c7vkj0tg6"]
+
+[ext_resource type="Script" uid="uid://bbktp3m2ykqti" path="res://pit_spikes.gd" id="1_oqv5s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_esnuu"]
+size = Vector3(1.5, 1, 1.5)
+
+[node name="Pit_Spikes" type="Node3D" unique_id=1186053055]
+script = ExtResource("1_oqv5s")
+
+[node name="Danger" type="Area3D" parent="." unique_id=37075375]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Danger" unique_id=1286382801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5063186, 0)
+shape = SubResource("BoxShape3D_esnuu")
+
+[node name="Boulder" type="Area3D" parent="." unique_id=1742417957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44598246, 0)
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boulder" unique_id=1343164584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5063186, 0)
+shape = SubResource("BoxShape3D_esnuu")
+
+[connection signal="body_entered" from="Danger" to="." method="_on_danger_body_entered"]
+[connection signal="body_entered" from="Boulder" to="." method="_on_boulder_body_entered"]

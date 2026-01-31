@@ -117,13 +117,13 @@ script = ExtResource("1_8fw5i")
 [node name="Point" type="Node3D" parent="." unique_id=2089126953]
 
 [node name="Arrows_left" type="MeshInstance3D" parent="Point" unique_id=539444736]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 0.0005262301, 0, -0.0005262301, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0.0005262303, 0, -0.0005262303, 0.9999999, 0, 0, 0)
 material_override = ExtResource("2_8fw5i")
 mesh = ExtResource("3_8fw5i")
 surface_material_override/0 = ExtResource("2_8fw5i")
 
 [node name="Arrows_right" type="MeshInstance3D" parent="Point" unique_id=1425837975]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, -0.0005315736, 0, 0.0005315736, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, -0.00053157384, 0, 0.00053157384, 0.9999999, 0, 0, 0)
 material_override = ExtResource("2_8fw5i")
 mesh = ExtResource("4_txpug")
 surface_material_override/0 = ExtResource("2_8fw5i")
@@ -131,11 +131,11 @@ surface_material_override/0 = ExtResource("2_8fw5i")
 [node name="Area3D" type="Area3D" parent="Point" unique_id=686330847]
 
 [node name="Collision_left_arrows" type="CollisionShape3D" parent="Point/Area3D" unique_id=1275084989]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 0.00053157215, 0, -0.00053157215, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0.0005315724, 0, -0.0005315724, 0.9999999, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_ptami")
 
 [node name="Collision_right_arrows" type="CollisionShape3D" parent="Point/Area3D" unique_id=1235790090]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, -0.00052623, 0, 0.00052623, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, -0.00052623026, 0, 0.00052623026, 0.9999999, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_6wyia")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1238507048]
