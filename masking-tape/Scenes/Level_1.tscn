@@ -2,6 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="1_oiua3"]
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="2_i63mn"]
+[ext_resource type="Script" uid="uid://c4q43lj3exqeo" path="res://Scripts/GridSwitch.gd" id="3_vnunq"]
 
 [node name="Level1" type="Node" unique_id=814323965]
 
@@ -11,8 +12,10 @@ data = {
 "cells": PackedInt32Array(11, 0, 3, 12, 0, 0, 10, 0, 0, 9, 0, 2, 9, 65535, 1441792, 9, 1, 1441792, 9, 3, 1441792, 9, 2, 1441792, 9, 65534, 1441792, 9, 65533, 1441792, 9, 65532, 655361, 9, 4, 1048577, 8, 65532, 0, 8, 4, 0, 7, 4, 0, 6, 4, 0, 5, 4, 0, 7, 65532, 0, 6, 65532, 0, 5, 65532, 0, 4, 65532, 1441793, 4, 4, 1, 4, 3, 1441792, 4, 2, 1441792, 4, 1, 1441792, 4, 0, 1441792, 4, 65535, 1441792, 4, 65534, 1441792, 4, 65533, 1441792, 13, 0, 655360, 14, 0, 655360, 15, 0, 655360, 16, 0, 655360, 17, 0, 655360, 18, 0, 655360, 11, 1, 1048576, 11, 2, 1048576, 11, 3, 1048576, 11, 4, 1048576, 11, 6, 1048576, 11, 5, 1048576, 11, 65535, 1048576, 11, 65534, 1048576, 11, 65533, 1048576, 11, 65532, 1048576, 11, 65531, 1048576, 11, 65530, 1441792)
 }
 
-[node name="Player" parent="." unique_id=1061115857 instance=ExtResource("2_i63mn")]
+[node name="Player" parent="." unique_id=1061115857 node_paths=PackedStringArray("grids") instance=ExtResource("2_i63mn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.650208, 1.4203465, 0.9439155)
+script = ExtResource("3_vnunq")
+grids = []
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1796730196]
 transform = Transform3D(1, 0, 0, 0, -0.013107085, 0.9999141, 0, -0.9999141, -0.013107085, 28.257221, 4.298351, 1.8505688)
