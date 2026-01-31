@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cxu4q1g4krbvy" path="res://Sprites/bg_addon_2.png" id="2_nklf4"]
 [ext_resource type="Theme" uid="uid://ci3suq164ss8y" path="res://new_theme.tres" id="3_a7hwb"]
 [ext_resource type="AudioStream" uid="uid://dkx530brosxs8" path="res://Audio/Ambience N flute.mp3" id="4_s2c3o"]
+[ext_resource type="Texture2D" uid="uid://cdtaqtiw53fwl" path="res://Sprites/baff23f8-b909-4b59-850f-e7ee1dab01ee.png" id="5_idohh"]
 
 [node name="Menu" type="Control" unique_id=499872521]
 layout_mode = 3
@@ -56,6 +57,10 @@ theme = ExtResource("3_a7hwb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1921215371]
 layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1602155323]
+layout_mode = 2
+texture = ExtResource("5_idohh")
 
 [node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=990720841]
 layout_mode = 2
