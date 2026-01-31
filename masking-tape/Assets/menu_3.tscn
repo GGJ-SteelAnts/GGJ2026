@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cc2ne6swxqqbi"]
+
+[ext_resource type="Texture2D" uid="uid://d3f63vttcd2b1" path="res://Sprites/bg_3.png" id="1_nklf4"]
+[ext_resource type="Texture2D" uid="uid://vugr5f64rcqq" path="res://Sprites/bg_addon_1.png" id="2_m4ggs"]
+[ext_resource type="Theme" uid="uid://ci3suq164ss8y" path="res://new_theme.tres" id="3_a7hwb"]
+
+[node name="Container" type="Container" unique_id=920609804]
+
+[node name="bg" type="TextureRect" parent="." unique_id=395673767]
+layout_mode = 2
+texture = ExtResource("1_nklf4")
+
+[node name="bg_addon" type="TextureRect" parent="." unique_id=18572353]
+layout_mode = 2
+texture = ExtResource("2_m4ggs")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=66660912]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=657715529]
+layout_mode = 2
+theme = ExtResource("3_a7hwb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1921215371]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=990720841]
+layout_mode = 2
+text = "Masking Temple"
+
+[node name="nev_game" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=160681547]
+layout_mode = 2
+text = "New Game"
+
+[node name="credits" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=131860116]
+layout_mode = 2
+text = "Credits"
+
+[node name="quit" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=805646378]
+layout_mode = 2
+text = "Quit"

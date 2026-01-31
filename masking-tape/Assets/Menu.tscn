@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://b6vf3ps2atgrg"]
 
+[ext_resource type="Texture2D" uid="uid://cqspen51bg3w4" path="res://Sprites/bg_2.png" id="1_v4r06"]
 [ext_resource type="Theme" uid="uid://ci3suq164ss8y" path="res://new_theme.tres" id="1_v7maw"]
 
 [node name="CenterContainer" type="CenterContainer" unique_id=417732944]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1924893779]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=676644498]
+layout_mode = 2
+texture = ExtResource("1_v4r06")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1082072004]
 layout_mode = 2
