@@ -1,21 +1,51 @@
-[gd_scene format=3 uid="uid://cc2ne6swxqqbi"]
+[gd_scene format=3 uid="uid://d2fe6luipxfyu"]
 
 [ext_resource type="Texture2D" uid="uid://d3f63vttcd2b1" path="res://Sprites/bg_3.png" id="1_nklf4"]
 [ext_resource type="Texture2D" uid="uid://vugr5f64rcqq" path="res://Sprites/bg_addon_1.png" id="2_m4ggs"]
 [ext_resource type="Theme" uid="uid://ci3suq164ss8y" path="res://new_theme.tres" id="3_a7hwb"]
 
-[node name="Container" type="Container" unique_id=920609804]
+[node name="Container" type="Control" unique_id=499872521]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="bg" type="TextureRect" parent="." unique_id=395673767]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_nklf4")
+expand_mode = 2
 
 [node name="bg_addon" type="TextureRect" parent="." unique_id=18572353]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_m4ggs")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=66660912]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -94.0
+offset_right = 93.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=657715529]
 layout_mode = 2
