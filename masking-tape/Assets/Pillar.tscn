@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bqpx0eojc18bl"]
+
+[ext_resource type="ArrayMesh" uid="uid://d1ouuttqka4fe" path="res://Assets/level/Props/pillar.obj" id="1_pw1j8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw1j8"]
+size = Vector3(0.45, 2.5, 0.45)
+
+[node name="Pillar" type="StaticBody3D" unique_id=981871675]
+
+[node name="Pillar" type="MeshInstance3D" parent="." unique_id=132703677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("1_pw1j8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1277886591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_pw1j8")
