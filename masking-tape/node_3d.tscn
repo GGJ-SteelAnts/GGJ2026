@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dt81vbu4kwk20"]
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_4xowi"]
+
+[node name="Node3D" type="Node3D" unique_id=1293126268]
+
+[node name="s" type="GridMap" parent="." unique_id=1082201137]
+transform = Transform3D(0.97897077, 0, -0.20400058, 0, 1, 0, 0.20400058, 0, 0.97897077, 0, 0, 0)
+mesh_library = SubResource("MeshLibrary_4xowi")
