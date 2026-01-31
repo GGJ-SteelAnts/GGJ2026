@@ -22,17 +22,20 @@ var pitch := 0.0
 func set_grid_enabled(grid_name: String, enabled: bool) -> void:
 	for grid in grids:
 		if grid.name == grid_name:
-			grid.show()	
-			$grid/StaticBody3D/CollisionShape3D.disabled = false
+			grid.show()
+			grid.set_collision_layer(1)
+			grid.set_collision_mask(1)
 
 func set_grid_enabled_only(grid_name: String) -> void:
 	for grid in grids:
 		if grid.name == grid_name:
 			grid.show()	
-			$grid/StaticBody3D/CollisionShape3D.disabled = false		
+			grid.set_collision_layer(1)
+			grid.set_collision_mask(1)	
 		else:
 			grid.hide()
-			$grid/StaticBody3D/CollisionShape3D.disabled = true
+			grid.set_collision_layer(0)
+			grid.set_collision_mask(0)
 
 func _ready() -> void:
 	interact_label.text = ""
