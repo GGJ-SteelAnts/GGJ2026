@@ -15,6 +15,8 @@ var grid_index: int = 0
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var interact_label: Label = $UI/Label
 
+var activeMask: Mask.Type = Mask.Type.NONE
+
 var interactTarget = null
 
 var pitch := 0.0
@@ -52,7 +54,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera_pivot.rotation.x = pitch
 		
 	if event.is_action_pressed("interact") and interactTarget != null:
-		interactTarget.active()
+		interactTarget.active(self)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("switch_grid"):
@@ -87,3 +89,6 @@ func _physics_process(delta: float) -> void:
 		
 		if other is PushBox:
 			other.action(col.get_normal())
+
+func attacked() -> void:
+	pass

@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bcomoyu7gm5ut"]
 
+[ext_resource type="Material" uid="uid://cpqdnt1y63rok" path="res://Materials/basic.tres" id="1_6bp64"]
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://car23dc87dell" path="res://Assets/block.tscn" id="2_8gbba"]
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dmedbnul01wtl" path="res://Assets/bolder.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cenw7rvxo31ap" path="res://Assets/lever.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bkm8bke2p7ty7" path="res://Assets/mask.tscn" id="6_21xkr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(60, 2, 60)
@@ -28,11 +30,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 shape = SubResource("BoxShape3D_7u77a")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1523660637]
+material_override = ExtResource("1_6bp64")
 mesh = SubResource("BoxMesh_jjgbg")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439878071]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9.767035, 0)
-shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1061115857 instance=ExtResource("1_jjgbg")]
 
@@ -52,6 +51,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6025124, 0.50000095, -0.26
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall" unique_id=1484129212]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.532203, 1.5, 0)
+material_override = ExtResource("1_6bp64")
 mesh = SubResource("BoxMesh_21xkr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall" unique_id=56274156]
@@ -60,3 +60,10 @@ shape = SubResource("BoxShape3D_6bp64")
 
 [node name="Lever" parent="." unique_id=807020465 instance=ExtResource("5_kry3j")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.11244, 1.8049397, 0.31670353)
+
+[node name="Mask" parent="." unique_id=81466868 instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5495663, 0, 6.718333)
+
+[node name="Mask2" parent="." unique_id=1062898504 instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8374443, 0, 0)
+type = 1

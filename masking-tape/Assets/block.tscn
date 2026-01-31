@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://car23dc87dell"]
 
 [ext_resource type="Script" uid="uid://dia7rkvnb5yay" path="res://Assets/Objects.gd" id="1_qxhqx"]
+[ext_resource type="Material" uid="uid://bkseuk32hmrwh" path="res://Materials/blue.tres" id="2_pixdw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 
@@ -13,4 +14,5 @@ script = ExtResource("1_qxhqx")
 shape = SubResource("BoxShape3D_jjgbg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2104508456]
+material_override = ExtResource("2_pixdw")
 mesh = SubResource("BoxMesh_bo1nx")
