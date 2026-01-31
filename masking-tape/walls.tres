@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6sawgo4wp51s"]
+
+[ext_resource type="Texture2D" uid="uid://qgr34uuawckw" path="res://base.png" id="1_o8xs5"]
+[ext_resource type="Texture2D" uid="uid://dbiluutlvih2y" path="res://test_normal_Height.png" id="2_14og1"]
+[ext_resource type="Texture2D" uid="uid://dllxwcu4wluth" path="res://test_normal_Normal_OpenGL.png" id="3_m67i8"]
+[ext_resource type="Texture2D" uid="uid://c0h1xe18nfn5y" path="res://test_normal_Roughness.png" id="4_l6wwy"]
+
+[resource]
+albedo_texture = ExtResource("1_o8xs5")
+roughness_texture = ExtResource("4_l6wwy")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_m67i8")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_14og1")
