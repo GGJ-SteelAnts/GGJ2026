@@ -9,8 +9,6 @@ var is_active: bool = false
 
 func _ready() -> void:
 	anim = animationPlayer.get_animation(animation)
-	animationPlayer.current_animation = animation
-	animationPlayer.seek(0, true)
 
 func activate(switched: bool) -> void:
 	if switched == false:
