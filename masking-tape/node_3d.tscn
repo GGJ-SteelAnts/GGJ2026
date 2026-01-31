@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://dt81vbu4kwk20"]
 
+[ext_resource type="Script" uid="uid://c4q43lj3exqeo" path="res://Scripts/GridSwitch.gd" id="1_a202f"]
+
 [sub_resource type="MeshLibrary" id="MeshLibrary_4xowi"]
 
-[node name="Node3D" type="Node3D" unique_id=1293126268]
+[node name="Node3D" type="Node3D" unique_id=1293126268 node_paths=PackedStringArray("grids")]
+script = ExtResource("1_a202f")
+grids = [null, null, null]
 
 [node name="s" type="GridMap" parent="." unique_id=1082201137]
 transform = Transform3D(0.97897077, 0, -0.20400058, 0, 1, 0, 0.20400058, 0, 0.97897077, 0, 0, 0)

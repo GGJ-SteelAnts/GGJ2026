@@ -43,7 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("switch_grid"):
 		grid_index = grid_index + 1
-		if grid_index > grids.size():
+		if grid_index > (grids.size() -1):
 			grid_index = 0
 		set_grid_enabled_only(grids[grid_index].name)
 
