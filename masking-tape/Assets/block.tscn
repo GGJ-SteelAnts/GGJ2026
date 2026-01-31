@@ -6,7 +6,7 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_bo1nx"]
 
-[node name="Block" type="CharacterBody3D" unique_id=302519340]
+[node name="Block" type="CharacterBody3D" unique_id=1501543153]
 script = ExtResource("1_qxhqx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=764674833]

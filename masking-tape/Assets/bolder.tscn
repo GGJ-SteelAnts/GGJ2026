@@ -6,7 +6,7 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_jb30m"]
 
-[node name="Bolder" type="CharacterBody3D" unique_id=93088795]
+[node name="Bolder" type="CharacterBody3D" unique_id=1309546037]
 script = ExtResource("1_jb30m")
 mode = 1
 

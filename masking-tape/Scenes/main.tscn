@@ -4,12 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://car23dc87dell" path="res://Assets/block.tscn" id="2_8gbba"]
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dmedbnul01wtl" path="res://Assets/bolder.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cenw7rvxo31ap" path="res://Assets/lever.tscn" id="5_kry3j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(60, 2, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jjgbg"]
 size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_21xkr"]
+size = Vector3(10, 3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6bp64"]
+size = Vector3(10, 3, 1)
 
 [node name="Main" type="Node" unique_id=1818422626]
 
@@ -40,3 +47,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 11.643)
 
 [node name="Bolder" parent="." unique_id=93088795 instance=ExtResource("4_jjvhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6025124, 0.50000095, -0.26894665)
+
+[node name="Wall" type="StaticBody3D" parent="." unique_id=832733142]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall" unique_id=1484129212]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.532203, 1.5, 0)
+mesh = SubResource("BoxMesh_21xkr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall" unique_id=56274156]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.532203, 1.5, 0)
+shape = SubResource("BoxShape3D_6bp64")
+
+[node name="Lever" parent="." unique_id=807020465 instance=ExtResource("5_kry3j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.11244, 1.8049397, 0.31670353)
