@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://d2fe6luipxfyu"]
+[gd_scene format=3 uid="uid://cc2ne6swxqqbi"]
 
 [ext_resource type="Texture2D" uid="uid://d3f63vttcd2b1" path="res://Sprites/bg_3.png" id="1_nklf4"]
-[ext_resource type="Texture2D" uid="uid://vugr5f64rcqq" path="res://Sprites/bg_addon_1.png" id="2_m4ggs"]
+[ext_resource type="Texture2D" uid="uid://cxu4q1g4krbvy" path="res://Sprites/bg_addon_2.png" id="2_nklf4"]
 [ext_resource type="Theme" uid="uid://ci3suq164ss8y" path="res://new_theme.tres" id="3_a7hwb"]
 
 [node name="Container" type="Control" unique_id=499872521]
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_m4ggs")
+texture = ExtResource("2_nklf4")
 expand_mode = 2
 stretch_mode = 4
 
