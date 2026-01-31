@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4q43lj3exqeo" path="res://Scripts/GridSwitch.gd" id="1_nw7js"]
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="1_oiua3"]
 [ext_resource type="PackedScene" uid="uid://crbbsg2wif7r4" path="res://Assets/player.tscn" id="2_i63mn"]
+[ext_resource type="PackedScene" uid="uid://bqpx0eojc18bl" path="res://Assets/Pillar.tscn" id="3_j0k67"]
 [ext_resource type="PackedScene" uid="uid://dmedbnul01wtl" path="res://Assets/bolder.tscn" id="3_nh7xm"]
 [ext_resource type="PackedScene" uid="uid://bq2cuqspxo1d1" path="res://Assets/mask.tscn" id="4_nw7js"]
 
@@ -13,9 +14,15 @@ grids = [NodePath("GridMap_a"), NodePath("GridMap_b"), NodePath("GridMap_c")]
 [node name="GridMap_a" type="GridMap" parent="." unique_id=187625679]
 mesh_library = ExtResource("1_oiua3")
 data = {
-"cells": PackedInt32Array(19, 65535, 1441799, 19, 1, 7, 20, 65535, 1441798, 20, 1, 1048582, 21, 1, 1048583, 21, 65535, 655367, 19, 0, 1048585, 20, 0, 1048585, 21, 0, 655366, 18, 0, 655360, 16, 0, 0, 15, 0, 655360, 13, 0, 655360, 12, 0, 655360, 11, 0, 655360, 10, 0, 655360, 9, 0, 655360, 8, 65535, 655367, 8, 1, 1048583, 6, 1, 7, 6, 65535, 1441799, 6, 0, 6, 7, 1, 1048582, 7, 65535, 1441798, 8, 0, 4, 7, 0, 4, 17, 0, 0)
+"cells": PackedInt32Array(19, 65535, 1441799, 19, 1, 7, 20, 65535, 1441798, 20, 1, 1048582, 21, 1, 1048583, 21, 65535, 655367, 19, 0, 1048585, 20, 0, 1048585, 21, 0, 655366, 18, 0, 655360, 16, 0, 0, 15, 0, 655360, 13, 0, 655360, 12, 0, 655360, 11, 0, 655360, 10, 0, 655360, 9, 0, 655360, 8, 65535, 655367, 8, 1, 1048583, 6, 1, 7, 6, 65535, 1441799, 6, 0, 6, 7, 1, 1048582, 7, 65535, 1441798, 8, 0, 4, 7, 0, 4, 17, 0, 0, 14, 0, 10)
 }
-metadata/_editor_floor_ = Vector3(0, -1, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Pillar3" parent="GridMap_a" unique_id=981871675 instance=ExtResource("3_j0k67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.935, 1, -0.15)
+
+[node name="Pillar4" parent="GridMap_a" unique_id=986113583 instance=ExtResource("3_j0k67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.935, 1, 2.15)
 
 [node name="GridMap_b" type="GridMap" parent="." unique_id=1645351086]
 visible = false
@@ -33,6 +40,8 @@ data = {
 
 [node name="Player" parent="." unique_id=1061115857 instance=ExtResource("2_i63mn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.42889, 1.3971683, 1.0093462)
+speed = 7.0
+jump_velocity = 6.0
 
 [node name="Mask" parent="." unique_id=81466868 instance=ExtResource("4_nw7js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.850919, 1.000001, 1.1550779)
