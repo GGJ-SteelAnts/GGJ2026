@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://bkm8bke2p7ty7"]
+[gd_scene format=3 uid="uid://bq2cuqspxo1d1"]
 
 [ext_resource type="Script" uid="uid://cvexexob85bnb" path="res://Assets/mask.gd" id="1_520j3"]
 [ext_resource type="Material" uid="uid://bpyha5v53djv3" path="res://Materials/red.tres" id="1_an3eo"]
+[ext_resource type="Texture2D" uid="uid://bbisybhpowa20" path="res://Sprites/mask.png" id="2_tr2m3"]
 [ext_resource type="Material" uid="uid://bdoo3vefs7ewl" path="res://Materials/green.tres" id="3_vccx7"]
 [ext_resource type="Material" uid="uid://bkseuk32hmrwh" path="res://Materials/blue.tres" id="4_tr2m3"]
 
@@ -19,6 +20,7 @@ size = Vector3(0.2, 0.15, 0.03)
 
 [node name="Mask" type="Node3D" unique_id=81466868]
 script = ExtResource("1_520j3")
+mask_ui = ExtResource("2_tr2m3")
 materials_by_mode = Array[Material]([ExtResource("1_an3eo"), ExtResource("3_vccx7"), ExtResource("4_tr2m3")])
 
 [node name="Area3D" type="Area3D" parent="." unique_id=295926891]

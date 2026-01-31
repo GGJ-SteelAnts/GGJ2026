@@ -2,6 +2,7 @@ extends Node3D
 class_name Mask
 
 enum Type { RED=0, GREEN=1, BLUE=2, NONE=3 }
+@export var mask_ui: CompressedTexture2D
 @export var type: Type = Type.RED
 @export var materials_by_mode: Array[Material] = []
 @onready var item: Node3D = $Pivot
@@ -30,6 +31,7 @@ func active(player: Player) -> void:
 		get_tree().current_scene.add_child(instance)
 	
 	player.activeMask = type
+	player.get_node('UI/CurrentMask').texture = mask_ui
 	player.interactTarget = null
 	queue_free()
 	pass

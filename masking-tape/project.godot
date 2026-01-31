@@ -13,7 +13,7 @@ config_version=5
 config/name="Masking tape"
 run/main_scene="uid://bcomoyu7gm5ut"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.ico"
 
 [autoload]
 
