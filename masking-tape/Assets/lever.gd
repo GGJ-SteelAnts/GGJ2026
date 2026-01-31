@@ -1,5 +1,6 @@
 extends Node3D
 
+@export var animation: StringName = "switch"
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 
 var anim: Animation
@@ -7,16 +8,16 @@ var switched: bool = false
 var is_active: bool = false
 
 func _ready() -> void:
-	anim = animationPlayer.get_animation("switch")
-	animationPlayer.current_animation = "switch"
+	anim = animationPlayer.get_animation(animation)
+	animationPlayer.current_animation = animation
 	animationPlayer.seek(anim.length, true)
 
-func active() -> void:
+func active(player: Player) -> void:
 	if switched == false:
-		animationPlayer.play_backwards("switch")
+		animationPlayer.play_backwards(animation)
 		switched = true;
 	else:
-		animationPlayer.play("switch")
+		animationPlayer.play(animation)
 		switched = false;
 
 func _process(delta: float) -> void:

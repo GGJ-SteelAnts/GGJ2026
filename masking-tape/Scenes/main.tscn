@@ -5,6 +5,7 @@
 [ext_resource type="MeshLibrary" uid="uid://hp6odosd8gj4" path="res://tiles.meshlib" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dmedbnul01wtl" path="res://Assets/bolder.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cenw7rvxo31ap" path="res://Assets/lever.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bkm8bke2p7ty7" path="res://Assets/mask.tscn" id="6_21xkr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7u77a"]
 size = Vector3(60, 2, 60)
@@ -29,10 +30,6 @@ shape = SubResource("BoxShape3D_7u77a")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1523660637]
 mesh = SubResource("BoxMesh_jjgbg")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439878071]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9.767035, 0)
-shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1061115857 instance=ExtResource("1_jjgbg")]
 
@@ -60,3 +57,10 @@ shape = SubResource("BoxShape3D_6bp64")
 
 [node name="Lever" parent="." unique_id=807020465 instance=ExtResource("5_kry3j")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.11244, 1.8049397, 0.31670353)
+
+[node name="Mask" parent="." unique_id=81466868 instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5495663, 0, 6.718333)
+
+[node name="Mask2" parent="." unique_id=1062898504 instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8374443, 0, 0)
+type = 1

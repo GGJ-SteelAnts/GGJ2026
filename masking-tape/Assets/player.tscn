@@ -36,3 +36,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1730411934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+light_color = Color(1, 0.7137255, 0.39607844, 1)
