@@ -18,14 +18,17 @@ var pitch := 0.0
 func set_grid_enabled(grid_name: String, enabled: bool) -> void:
 	for grid in grids:
 		if grid.name == grid_name:
-			grid.visible = enabled
+			grid.show()	
+			$grid/StaticBody3D/CollisionShape3D.disabled = false
 
 func set_grid_enabled_only(grid_name: String) -> void:
 	for grid in grids:
 		if grid.name == grid_name:
-			grid.visible = true
+			grid.show()	
+			$grid/StaticBody3D/CollisionShape3D.disabled = false		
 		else:
-			grid.visible = false
+			grid.hide()
+			$grid/StaticBody3D/CollisionShape3D.disabled = true
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

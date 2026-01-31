@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dhvj2caht06tv"]
 
 [ext_resource type="ArrayMesh" uid="uid://c8no52m05qqgf" path="res://Assets/level/c.obj" id="1_3efjx"]
+[ext_resource type="Material" uid="uid://b6sawgo4wp51s" path="res://walls.tres" id="1_tuotw"]
 [ext_resource type="ArrayMesh" uid="uid://c6qq413x1sf2u" path="res://Assets/level/o.obj" id="2_5qip5"]
-[ext_resource type="Material" uid="uid://cklv61fsht3nr" path="res://matterials.tres" id="2_tuotw"]
 [ext_resource type="ArrayMesh" uid="uid://bp6mxcpf2tlj5" path="res://Assets/level/o_1.obj" id="3_d5kjf"]
 [ext_resource type="ArrayMesh" uid="uid://w7rpu4v6pn6f" path="res://Assets/level/s.obj" id="4_gbsrp"]
 [ext_resource type="ArrayMesh" uid="uid://bw7cus3f4hqui" path="res://Assets/level/t.obj" id="5_tuotw"]
@@ -44,8 +44,9 @@ data = PackedVector3Array(-1, 0, -0.8452, -0.84559995, 0, -0.8452, -1, 0, 0, -1,
 [node name="Tiles" type="Node3D" unique_id=2027929530]
 
 [node name="C" type="MeshInstance3D" parent="." unique_id=555868310]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("1_3efjx")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="C" unique_id=552664902]
 
@@ -53,8 +54,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_3efjx")
 
 [node name="S" type="MeshInstance3D" parent="." unique_id=560601902]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("4_gbsrp")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="S" unique_id=1403812661]
 
@@ -62,8 +64,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_gbsrp")
 
 [node name="U" type="MeshInstance3D" parent="." unique_id=1447960128]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("6_dxq17")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="U" unique_id=2133753754]
 
@@ -71,8 +74,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_tuotw")
 
 [node name="T" type="MeshInstance3D" parent="." unique_id=2096892525]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("5_tuotw")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="T" unique_id=355676532]
 
@@ -80,8 +84,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_dxq17")
 
 [node name="O" type="MeshInstance3D" parent="." unique_id=1268103771]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("2_5qip5")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="O" unique_id=137784012]
 
@@ -89,8 +94,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_5qip5")
 
 [node name="O1" type="MeshInstance3D" parent="." unique_id=258402619]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("3_d5kjf")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="O1" unique_id=1301478919]
 
@@ -99,8 +105,9 @@ shape = SubResource("ConcavePolygonShape3D_d5kjf")
 
 [node name="T1" type="MeshInstance3D" parent="." unique_id=2129674074]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.068629265, 0.09707856, 0.014259636)
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("7_gbsrp")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="T1" unique_id=2116261308]
 
@@ -110,9 +117,9 @@ shape = SubResource("ConcavePolygonShape3D_6t23i")
 [node name="Node3D" type="Node3D" parent="T1" unique_id=1383763927]
 
 [node name="CD" type="MeshInstance3D" parent="." unique_id=2131680606]
-material_override = ExtResource("2_tuotw")
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("8_tuotw")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="CD" unique_id=806147067]
 
@@ -120,8 +127,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_fwhhu")
 
 [node name="C1" type="MeshInstance3D" parent="." unique_id=1184705006]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("9_dxq17")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="C1" unique_id=939045173]
 
@@ -129,8 +137,9 @@ surface_material_override/0 = ExtResource("2_tuotw")
 shape = SubResource("ConcavePolygonShape3D_hnbh7")
 
 [node name="O2" type="MeshInstance3D" parent="." unique_id=188140938]
+material_override = ExtResource("1_tuotw")
 mesh = ExtResource("3_d5kjf")
-surface_material_override/0 = ExtResource("2_tuotw")
+surface_material_override/0 = ExtResource("1_tuotw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="O2" unique_id=401490585]
 
