@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dmedbnul01wtl"]
 
 [ext_resource type="Script" uid="uid://dia7rkvnb5yay" path="res://Assets/Objects.gd" id="1_jb30m"]
+[ext_resource type="Material" uid="uid://bdoo3vefs7ewl" path="res://Materials/green.tres" id="2_m88gg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jb30m"]
 
@@ -14,4 +15,5 @@ mode = 1
 shape = SubResource("BoxShape3D_jb30m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=773473624]
+material_override = ExtResource("2_m88gg")
 mesh = SubResource("SphereMesh_jb30m")
